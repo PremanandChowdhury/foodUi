@@ -10,4 +10,10 @@
       <img [src]="cat.img" />
     </ion-slide>
   </ion-slides>
+
+  <ion-slides [options]="highlightSlideOptions">
+    <ion-slide *ngFor="let h of highlights">
+      <img [src]="h.img" />
+    </ion-slide>
+  </ion-slides>
 </ion-content>

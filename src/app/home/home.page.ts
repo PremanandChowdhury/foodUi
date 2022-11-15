@@ -18,6 +18,13 @@ export class HomePage implements OnInit {
     freeMode: true,
   };
 
+  highlightSlideOptions = {
+    slidesPerView: 1.05,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+  };
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -26,7 +33,7 @@ export class HomePage implements OnInit {
       .subscribe((result: any) => {
         this.categories = result.categories;
         this.featured = result.featured;
-        this.highlights = result.hightlights;
+        this.highlights = result.highlights;
       });
   }
 }
