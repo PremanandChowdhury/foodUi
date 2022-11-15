@@ -11,6 +11,13 @@ export class HomePage implements OnInit {
   featured: any[] = [];
   highlights: any[] = [];
 
+  catSlideOptions = {
+    slidesPerView: 3.5,
+    spaceBetween: 10,
+    slidesOffsetBefore: 11,
+    freeMode: true,
+  };
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {

@@ -4,4 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> Coming Soon... </ion-content>
+<ion-content>
+  <ion-slides [options]="catSlideOptions">
+    <ion-slide *ngFor="let cat of categories">
+      <img [src]="cat.img" />
+    </ion-slide>
+  </ion-slides>
+</ion-content>
