@@ -25,6 +25,12 @@ export class HomePage implements OnInit {
     loop: true,
   };
 
+  featuredSlideOptions = {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    freeMode: true,
+  };
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -32,8 +38,8 @@ export class HomePage implements OnInit {
       .get('https://devdactic.fra1.digitaloceanspaces.com/foodui/home.json')
       .subscribe((result: any) => {
         this.categories = result.categories;
-        this.featured = result.featured;
         this.highlights = result.highlights;
+        this.featured = result.featured;
       });
   }
 }
